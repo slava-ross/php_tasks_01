@@ -1,7 +1,8 @@
 <?php
 
 $strVar = "Hello! I'm a young php-fellow.";
-$intVar = 18_384_000;
+// $intVar = 18384000; // php ver. below 7.4.0
+$intVar = 18_384_000; // php ver. 7.4.0 and above
 $floatVar = 1212.5656;
 
 const ABS_ZERO = -273.15;

@@ -2,29 +2,25 @@
 
 function printXOR($a, $b)
 {
-	if ($a)
-	{
+	if ($a)	{
 		print_r("true\t\t");
 	}
-	else
-	{
-		print_r("false\t\t");	
+	else {
+		print_r("false\t\t");
 	}
-	if ($b)
-	{
+
+	if ($b)	{
 		print_r("true\t\t");
 	}
-	else
-	{
-		print_r("false\t\t");	
+	else {
+		print_r("false\t\t");
 	}
-	if ($a xor $b)
-	{
+
+	if ($a xor $b) {
 		print_r("true\t\t");
 	}
-	else
-	{
-		print_r("false\t\t");	
+	else {
+		print_r("false\t\t");
 	}
 	echo "\n";
 }
@@ -35,4 +31,10 @@ printXOR(false, true);
 printXOR(true, false);
 printXOR(true, true);
 echo "\n";
+
+/*
+ *
+ *
+ */
+
 ?>
