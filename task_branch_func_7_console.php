@@ -4,7 +4,6 @@
 
     $a = START_A;
     $b = START_B;
-    $result = NULL;
 
     function maxValue($a, $b) {
         if ($a >= $b) {
@@ -24,13 +23,13 @@
         }
     }
 
-    $mul = $a * $b; // для читабельности, а то и для скорости выполнения при отсутствии оптимизации кода.
+    $mul = $a * $b; // для читабельности
 
     if ($mul > 100 && $mul < 1000) {
         print_r(maxValue($a, $b) - minValue($a, $b) . "\n");
     }
     elseif ($mul > 1000) {
-        $result = $a * $b / maxValue($a, $b); // в задании не сказано, что сделать с результатом.
-        // print_r("$result\n"); // for debug
+        $result = $a * $b / maxValue($a, $b); // в задании не сказано, что сделать с результатом
+        //print_r("$result\n"); // for debug
     }
 ?>
