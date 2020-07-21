@@ -1,4 +1,5 @@
 <?php
+
     const INPUT_STRING = "Ведомость расходов АМОУ ДОД ДШИ-2 за Октябрь 2022";
 
     $translitTable = array(
@@ -37,21 +38,24 @@
         "я" => "ya",
     );
 
-    function translitRusEng($rusStr, $table) {
-        $rusStr = mb_strtolower($rusStr);
-        $engStr = "";
-        for ($index = 0; $index < mb_strlen($rusStr); $index++) {
-            $currentSymbol = mb_substr($rusStr, $index, 1);
-            if (array_key_exists($currentSymbol, $table)) {
-                $engStr .= $table[$currentSymbol];
+    function urlForming($inputStr, $rusTable) {
+        $inputStr = mb_strtolower($inputStr);
+        $urlString = "";
+        for ($index = 0; $index < mb_strlen($inputStr); $index++) {
+            $currentSymbol = mb_substr($inputStr, $index, 1);
+            if (array_key_exists($currentSymbol, $rusTable)) {
+                $urlString .= $rusTable[$currentSymbol];
+            }
+            elseif ($currentSymbol === ' ') {
+                $urlString .= '_';
             }
             else {
-                $engStr .= $currentSymbol;
+                $urlString .= $currentSymbol;
             }
         }
-        return $engStr;
+        return $urlString;
     }
 
-    $rusInputString = INPUT_STRING;
-    print_r(translitRusEng($rusInputString, $translitTable) . "\n");
+    $inputString = INPUT_STRING;
+    print_r(urlForming($inputString, $translitTable) . "\n");
 ?>
