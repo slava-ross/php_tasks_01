@@ -36,11 +36,44 @@
         "э" => "e",
         "ю" => "yu",
         "я" => "ya",
-        " " => "_"
+        " " => "_",
+        "А" => "А",
+        "Б" => "B",
+        "В" => "V",
+        "Г" => "G",
+        "Д" => "D",
+        "Е" => "E",
+        "Ё" => "YO",
+        "Ж" => "ZH",
+        "З" => "Z",
+        "И" => "I",
+        "Й" => "J",
+        "К" => "K",
+        "Л" => "L",
+        "М" => "M",
+        "Н" => "N",
+        "О" => "O",
+        "П" => "P",
+        "Р" => "R",
+        "С" => "S",
+        "Т" => "T",
+        "У" => "U",
+        "Ф" => "F",
+        "Х" => "KH",
+        "Ц" => "TS",
+        "Ч" => "CH",
+        "Ш" => "SH",
+        "Щ" => "SHCH",
+        "Ъ" => "IE",
+        "Ы" => "Y",
+        "Ь" => "",
+        "Э" => "E",
+        "Ю" => "YU",
+        "Я" => "YA"
     );
 
     function urlForming($inputStr, $rusTable) {
-        return str_replace(array_keys($rusTable), array_values($rusTable), mb_strtolower($inputStr));
+        return str_replace(array_keys($rusTable), array_values($rusTable), $inputStr);
     }
 
     $inputString = INPUT_STRING;
