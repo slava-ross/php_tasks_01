@@ -51,14 +51,6 @@
     ];
     foreach ($regions as $region => $cities) {
         echo "$region:\n";
-        for ($idx = 0; $idx < count($cities); $idx++) {
-            echo "$cities[$idx]";
-            if ($idx !== count($cities) - 1) {
-                echo ", ";
-            }
-            else {
-                echo "\n";
-            }
-        }
+        echo implode(', ', $cities) . PHP_EOL;
     }
 ?>

@@ -59,14 +59,6 @@
                 }
             )
         );
-        for ($idx = 0; $idx < count($filteredCities); $idx++) {
-            echo "$filteredCities[$idx]";
-            if ($idx !== count($filteredCities) - 1) {
-                echo ", ";
-            }
-            else {
-                echo "\n";
-            }
-        }
+        echo implode(', ', $filteredCities) . PHP_EOL;
     }
 ?>
